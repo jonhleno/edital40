@@ -15,3 +15,10 @@ framework:
     #fragments: true
     php_errors:
         log: true
+
+    default_locale: 'pt_BR'
+
+    translator: { fallbacks: ['%locale%'] }
+
+    templating:
+        engines: ['twig']

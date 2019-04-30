@@ -1,0 +1,20 @@
+sonata_user:
+  security_acl: true
+  manager_type: orm
+  class:
+    user:               App\Bundles\UserBundle\Entity\User
+    group:              App\Bundles\UserBundle\Entity\Group
+#  mailer: 'swiftmailer'
+  admin:                  # Admin Classes
+    user:
+      class:          Sonata\UserBundle\Admin\Entity\UserAdmin
+      controller:     SonataAdminBundle:CRUD
+      translation:    SonataUserBundle
+
+    group:
+      class:          Sonata\UserBundle\Admin\Entity\GroupAdmin
+      controller:     SonataAdminBundle:CRUD
+      translation:    SonataUserBundle
+
+  profile:
+    default_avatar: 'bundles/sonatauser/default_avatar.png'
